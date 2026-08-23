@@ -16,15 +16,15 @@ public class GCD {
         final int absA = Math.abs(a);
         final int absB = Math.abs(b);
         
-        int x = absA;
-        int y = absB;
+        int dividend = absA;
+        int divisor = absB;
         
-        while (y != 0) {
-            final int temp = y;
-            y = x % y;
-            x = temp;
+        while (divisor != 0) {
+            final int remainder = dividend % divisor;
+            dividend = divisor;
+            divisor = remainder;
         }
-        return x;
+        return dividend;
     }
     
     /**

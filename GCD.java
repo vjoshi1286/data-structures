@@ -40,25 +40,4 @@ public class GCD {
         }
         return gcdRecursive(b, a % b);
     }
-    
-    /**
-     * Main method to demonstrate GCD implementations
-     */
-    public static void main(String[] args) {
-        int num1 = 48;
-        int num2 = 18;
-        
-        System.out.println("GCD of " + num1 + " and " + num2 + " (Iterative): " + gcdIterative(num1, num2));
-        System.out.println("GCD of " + num1 + " and " + num2 + " (Recursive): " + gcdRecursive(num1, num2));
-        
-        System.out.println("\nMore examples:");
-        
-        // Test cases
-        int[][] testCases = {{60, 48}, {100, 50}, {17, 19}, {0, 5}};
-        
-        for (int[] testCase : testCases) {
-            int result = gcdIterative(testCase[0], testCase[1]);
-            System.out.println("GCD(" + testCase[0] + ", " + testCase[1] + ") = " + result);
-        }
-    }
 }

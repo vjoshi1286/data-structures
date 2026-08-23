@@ -2,7 +2,6 @@
  * Greatest Common Divisor (GCD) Implementation
  * Finds the largest positive integer that divides both numbers without a remainder.
  */
-
 public class GCD {
     
     /**

@@ -12,16 +12,19 @@ public class GCD {
      * @param b Second number
      * @return Greatest Common Divisor of a and b
      */
-    public static int gcdIterative(int a, int b) {
-        a = Math.abs(a);
-        b = Math.abs(b);
+    public static int gcdIterative(final int a, final int b) {
+        final int absA = Math.abs(a);
+        final int absB = Math.abs(b);
         
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
+        int x = absA;
+        int y = absB;
+        
+        while (y != 0) {
+            final int temp = y;
+            y = x % y;
+            x = temp;
         }
-        return a;
+        return x;
     }
     
     /**
@@ -31,13 +34,13 @@ public class GCD {
      * @param b Second number
      * @return Greatest Common Divisor of a and b
      */
-    public static int gcdRecursive(int a, int b) {
-        a = Math.abs(a);
-        b = Math.abs(b);
+    public static int gcdRecursive(final int a, final int b) {
+        final int absA = Math.abs(a);
+        final int absB = Math.abs(b);
         
-        if (b == 0) {
-            return a;
+        if (absB == 0) {
+            return absA;
         }
-        return gcdRecursive(b, a % b);
+        return gcdRecursive(absB, absA % absB);
     }
 }
